@@ -209,8 +209,8 @@ func sum(values interface{}) interface{} {
 func minus(values interface{}) interface{} {
 	var sum float64
 
-	for _, n := range values.([]interface{}) {
-		if sum == 0 {
+	for i, n := range values.([]interface{}) {
+		if i == 0 {
 			sum = toNumber(n)
 
 			continue
